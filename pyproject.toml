@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leakaudit"
+version = "0.1.0"
+description = "Detect data leakage and build leak-free, group-aware splits for image datasets"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Muhammad Rizwan Tahir" },
+    { name = "Shaista Habib" },
+    { name = "Sadaf Jabeen" },
+]
+keywords = ["data leakage", "train-test split", "fairness", "reproducibility",
+            "medical imaging", "dermatology"]
+dependencies = ["pandas>=1.1", "numpy>=1.19", "scikit-learn>=0.24"]
+
+[project.urls]
+Homepage = "https://github.com/TODO-REPO/leakaudit"
+
+[project.scripts]
+leakaudit = "leakaudit.cli:main"
+
+[tool.setuptools]
+packages = ["leakaudit"]
